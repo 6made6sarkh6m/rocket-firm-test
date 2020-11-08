@@ -1,0 +1,26 @@
+.photo-list {
+    
+    // position: absolute;
+    // left: 50%;
+    // transform: translate(-50%);
+    column-count: 3;
+    width: 80%;
+    margin: 30px auto;
+    
+    .card {
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            
+            border-radius: 10px;
+            &:hover{
+                filter: blur(5px);
+                cursor: pointer;
+            }
+            transition: .5s ease-in-out;
+        }
+        
+    }
+    
+}
