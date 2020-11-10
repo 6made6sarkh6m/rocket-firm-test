@@ -1,16 +1,14 @@
 import React from 'react';
 
-function Navbar({typeSearch, parseSearch, inputClick}){
+function Navbar({typeSearch, parseSearch}){
     return(
+        <div className="wrapper">
         <div className="nav">
             <div className="logo">
                 <div className="logo-icon"></div>
                 <span>Logo</span>
             </div>
             <div className="items">
-                <div className="input" onClick={inputClick}>
-                    <input type="text" placeholder="Поиск..." onChange={typeSearch} onKeyPress={parseSearch} />
-                </div>
                 <div className="favorites">
                     <div className="fav-icon"></div>
                     <span>Избранное</span>
@@ -20,6 +18,10 @@ function Navbar({typeSearch, parseSearch, inputClick}){
                     <span>History</span>
                 </div>
             </div>
+        </div>
+        <div className="input">
+                    <input type="text" placeholder="Поиск..." onChange={typeSearch} onKeyPress={parseSearch} />
+                </div>
         </div>
     );
 }
